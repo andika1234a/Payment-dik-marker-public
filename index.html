@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - dik_marker</title>
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #00ff88;
+    }
+    .button {
+      background-color: #00ff88;
+      color: black;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #00cc6a;
+    }
+    .hidden {
+      display: none;
+      margin-top: 10px;
+      font-size: 20px;
+      color: white;
+    }
+    .qris-img {
+      margin-top: 20px;
+      max-width: 300px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Payment: dik_marker</h1>  <div>
+    <button class="button" onclick="showDana()">Tampilkan Nomor DANA</button>
+    <div id="danaText" class="hidden">DANA: 081946492969</div>
+  </div>  <div>
+    <button class="button" onclick="showOvo()">Tampilkan Nomor OVO</button>
+    <div id="ovoText" class="hidden">OVO: 085923596743</div>
+  </div>  <div>
+    <button class="button" onclick="showQris()">Tampilkan QRIS</button>
+    <img id="qrisImage" class="qris-img" src="https://files.catbox.moe/lb6v0e.png" alt="QRIS Payment">
+  </div>  <script>
+    let danaCount = 0;
+    let ovoCount = 0;
+    let qrisCount = 0;
+
+    function showDana() {
+      danaCount++;
+      if (danaCount >= 2) {
+        document.getElementById("danaText").style.display = "block";
+      }
+    }
+
+    function showOvo() {
+      ovoCount++;
+      if (ovoCount >= 2) {
+        document.getElementById("ovoText").style.display = "block";
+      }
+    }
+
+    function showQris() {
+      qrisCount++;
+      if (qrisCount >= 2) {
+        document.getElementById("qrisImage").style.display = "block";
+      }
+    }
+  </script></body>
+</html>
